@@ -1,6 +1,8 @@
 # BSPWM Dots (1.0)
 Just a repo to store dots. This will more than likely get renamed when I figure out the general theme I want to go with. 
 
+![Screencap](imgs/004.png)
+
 ### Some Tools
 * Arch Linux
 * BSPWM
