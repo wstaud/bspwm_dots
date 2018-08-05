@@ -28,7 +28,7 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 # Lock Screen
-super + 0
+super + alt + 0 
 	~/scripts/lock.sh
 
 
@@ -109,8 +109,12 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+super + {_,shift + }{1-5}
+	bspc {desktop -f,node -d} '^{6-9,10}'
+
+super + {_,shift + }{6-9,0}
+	bspc {desktop -f,node -d} '^{1-5}'
+
 
 #
 # preselect
@@ -148,3 +152,13 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
+
+#
+# Custom
+#
+
+alt + {_,shift + }{1-9,0}
+    bspc {desktop -f, window -d} $(bspc query -M -m)/{a,b,c}
+
+alt + w
+        bspc monitor -f next
